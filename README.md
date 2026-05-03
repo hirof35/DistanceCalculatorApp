@@ -2,4 +2,7 @@
 java distanceCalculatorApp.DistanceCalculatorApp
 📝 計算ロジックについて本アプリでは、地球の半径を $6,371.0\text{km}$ と設定し、以下のハバサインの公式を用いています。$$a = \sin^2\left(\frac{\Delta\text{lat}}{2}\right) + \cos(\text{lat1}) \cdot \cos(\text{lat2}) \cdot \sin^2\left(\frac{\Delta\text{lon}}{2}\right)$$$$d = 2 \cdot R \cdot \operatorname{asin}(\sqrt{a})$$📜 ライセンスMIT License「物流を制する者は、距離と構造を制する。」
 
+
+
+
 ![Uploading スクリーンショット 2026-05-03 104103.png…]()
