@@ -1,8 +1,23 @@
-📍 Java 地図距離計算マスター (Distance Calculator App)~ API連携と球面幾何学による精密な距離計測 ~Distance Calculator App は、日本の住所文字列から正確な座標（緯度・経度）を取得し、2点間の大圏距離（直線距離）を算出するJavaデスクトップアプリケーションです。🌟 プロジェクトの概要このアプリケーションは、物流、配送計画、あるいは旅行の計画など、「地名から距離を知りたい」という実務的なニーズに応えます。国土地理院の「地名検索API」と直接通信することで、特別なAPIキーを必要とせず、即座に座標情報を取得・計算できる点が最大の特徴です。✨ 主な機能地名からの座標検索（ジオコーディング）:国土地理院 API を活用。都道府県名や市町村名、施設名から緯度・経度を特定します。高精度な距離計算（Haversine式）:地球を完全な球体と仮定し、余弦定理を応用したハバサインの公式（Haversine Formula）を用いて計算。数千キロの長距離でも誤差を最小限に抑えます。非同期・ノンブロッキング通信:SwingWorker の実装により、APIリクエスト中もUIが応答し続け、進捗状況を表示。履歴の自動保存・復元:過去の検索履歴をローカルの distance_history.txt に自動的に保存し、次回起動時に復元。外部マップ連携:計算した2点間のルートを、デフォルトブラウザでGoogleマップとして即座に表示。🛠 技術スタックLanguage: Java 17+GUI Framework: Java Swing (BorderLayout, BoxLayout)Networking: java.net.http.HttpClient (Java 11+ 標準)API Context: 国土地理院 地名検索APIMathematics: $R \cdot 2 \cdot \operatorname{atan2}(\sqrt{a}, \sqrt{1-a})$ (球面三角法)Shutterstock詳しく見る🚀 実行方法JDK 17 以上がインストールされていることを確認します。以下のコマンドでビルドおよび実行を行います。Bashjavac distanceCalculatorApp/DistanceCalculatorApp.java
-java distanceCalculatorApp.DistanceCalculatorApp
-📝 計算ロジックについて本アプリでは、地球の半径を $6,371.0\text{km}$ と設定し、以下のハバサインの公式を用いています。$$a = \sin^2\left(\frac{\Delta\text{lat}}{2}\right) + \cos(\text{lat1}) \cdot \cos(\text{lat2}) \cdot \sin^2\left(\frac{\Delta\text{lon}}{2}\right)$$$$d = 2 \cdot R \cdot \operatorname{asin}(\sqrt{a})$$📜 ライセンスMIT License「物流を制する者は、距離と構造を制する。」
-
-
-
-
+📍 Java 地図距離計算マスター (Distance Calculator App)~ API連携と球面幾何学による精密な距離計測 ~Distance Calculator App は、日本の住所文字列から正確な座標（緯度・経度）を取得し、2点間の大圏距離（直線距離）を算出するJavaデスクトップアプリケーションです。
 ![Uploading スクリーンショット 2026-05-03 104103.png…]()
+
+🌟 プロジェクトの概要このアプリケーションは、物流、配送計画、あるいは旅行の計画など、「地名から距離を知りたい」という実務的なニーズに応えます。
+国土地理院の「地名検索API」と直接通信することで、特別なAPIキーを必要とせず、即座に座標情報を取得・計算できる点が最大の特徴です。
+✨ 主な機能地名からの座標検索（ジオコーディング）:国土地理院 API を活用。
+都道府県名や市町村名、施設名から緯度・経度を特定します。
+高精度な距離計算（Haversine式）:地球を完全な球体と仮定し、余弦定理を応用したハバサインの公式（Haversine Formula）を用いて計算。
+数千キロの長距離でも誤差を最小限に抑えます。
+非同期・ノンブロッキング通信:SwingWorker の実装により、APIリクエスト中もUIが応答し続け、進捗状況を表示。
+履歴の自動保存・復元:過去の検索履歴をローカルの distance_history.txt に自動的に保存し、次回起動時に復元。
+外部マップ連携:計算した2点間のルートを、デフォルトブラウザでGoogleマップとして即座に表示。
+🛠 技術スタックLanguage: Java 17+GUI Framework: Java Swing (BorderLayout, BoxLayout)Networking: java.net.http.HttpClient (Java 11+ 標準)API Context: 国土地理院 地名検索APIMathematics: $R \cdot 2 \cdot \operatorname{atan2}(\sqrt{a}, \sqrt{1-a})$ (球面三角法)Shutterstock詳しく見る🚀 実行方法JDK 17 以上がインストールされていることを確認します。以下のコマンドでビルドおよび実行を行います。Bashjavac distanceCalculatorApp/DistanceCalculatorApp.java
+java distanceCalculatorApp.DistanceCalculatorApp
+📝 計算ロジックについて本アプリでは、地球の半径を $6,371.0\text{km}$ と設定し、以下のハバサインの公式を用いています。
+$$a = \sin^2\left(\frac{\Delta\text{lat}}{2}\right) + \cos(\text{lat1}) \cdot \cos(\text{lat2}) \cdot \sin^2\left(\frac{\Delta\text{lon}}{2}\right)$$$$d = 2 \cdot R \cdot \operatorname{asin}(\sqrt{a})$$
+📜 ライセンスMIT License
+「物流を制する者は、距離と構造を制する。」
+
+
+
+
+
