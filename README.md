@@ -1,6 +1,6 @@
 📍 Java 地図距離計算マスター (Distance Calculator App)~ API連携と球面幾何学による精密な距離計測 ~Distance Calculator App は、日本の住所文字列から正確な座標（緯度・経度）を取得し、2点間の大圏距離（直線距離）を算出するJavaデスクトップアプリケーションです。
-![Uploading スクリーンショット 2026-05-03 104103.png…]()
-
+<img width="1919" height="1141" alt="スクリーンショット 2026-05-23 191249" src="https://github.com/user-attachments/assets/af9ea97c-4928-4813-9fa4-6b5ff99ef54c" />
+<img width="977" height="604" alt="スクリーンショット 2026-05-23 191234" src="https://github.com/user-attachments/assets/d7c096e9-cd11-4863-99d8-7fbdf520fdfe" />
 🌟 プロジェクトの概要このアプリケーションは、物流、配送計画、あるいは旅行の計画など、「地名から距離を知りたい」という実務的なニーズに応えます。
 国土地理院の「地名検索API」と直接通信することで、特別なAPIキーを必要とせず、即座に座標情報を取得・計算できる点が最大の特徴です。
 ✨ 主な機能地名からの座標検索（ジオコーディング）:国土地理院 API を活用。
